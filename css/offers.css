@@ -59,22 +59,37 @@
     transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
     transition: transform 0.5s, -webkit-transform 0.5s;
+    transition: all .5s ease-out;
 }
 .offers__item__box .offer__item__box:nth-child(1) {
     border-color: #f27c5b;
+    background: linear-gradient(to right, #f5c1b3ab 50%, white 50%);
+    display: block;
+    background-size: 200% 100%;
+    background-position: right bottom;
 }
 .offers__item__box .offer__item__box:nth-child(2) {
     border-color: #514bd9;
+    background: linear-gradient(to right, #d9d8f8  50%, white 50%);
+    display: block;
+    background-size: 200% 100%;
+    background-position: right bottom;
 }
 .offers__item__box .offer__item__box:nth-child(3) {
     border-color: #3db647;
+    background: linear-gradient(to right, #e0f6e2 50%, white 50%);
+    display: block;
+    background-size: 200% 100%;
+    background-position: right bottom;
 }
 .offers__item__box .offer__item__box:hover {
     cursor: pointer;
     position: relative;
     -webkit-transform: translateX(15px);
     transform: translateX(15px);
+    background-position: left bottom;
 }
+
 @media (max-width: 1250px) {
     .offers__item__img img {
         max-width: 450px;

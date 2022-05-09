@@ -46,12 +46,12 @@
     cursor: pointer;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 .social__icon i {
     color: #cd7d1b;
 }
 .social__icon:hover {
-    transition: all 0.3s ease-in-out;
     transform: translateY(-0.5rem);
 }
 .footer__nav ul {
@@ -61,13 +61,36 @@
     justify-content: center;
     gap: 1.5rem;
 }
+.footer__nav ul li{
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+}
 .footer__nav--link {
+    background: linear-gradient( to right, var(--purple), #9c23e3 50%, var(--secondary-color) 50% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    position: relative;
+}
+.footer__nav li:hover{
+    transform: translateX(1rem);
 }
 .footer__nav--link:hover {
-    color: var(--purple);
+    background-position: 0 100%;
     transition: all 0.4s ease-in-out;
+}
+.footer__nav--link:hover::before {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(-50%) translateX();
+    -ms-transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(0);
 }
 .footer__email {
     display: flex;
@@ -85,6 +108,28 @@
     font-size: 1.4rem;
     font-family: inherit;
     outline: none;
+}
+.footer__nav--link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-1rem);
+    -ms-transform: translateY(-50%) translateX(-1rem);
+    -moz-transform: translateY(-50%) translateX(-1rem);
+    -o-transform: translateY(-50%) translateX(-1rem);
+    transform: translateY(-50%) translateX(-1rem);
+    left: -1.3rem;
+    opacity: 0;
+    visibility: hidden;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 2rem;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    background-color: var(--purple);
 }
 
 @media (max-width: 1300px) {
