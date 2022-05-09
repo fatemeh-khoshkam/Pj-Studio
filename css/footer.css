@@ -160,7 +160,7 @@
 }
 @media (max-width: 700px) {
     #footer {
-        clip-path: ellipse(95% 100% at 46.08% 100%);
+        clip-path: ellipse(100% 100%);
     }
     #footer .container {
         padding: 0 2rem;
