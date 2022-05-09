@@ -3,6 +3,11 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="images/01- Header/pj-logo.ico"
+            type="image/x-icon"
+        />
         <title>Pj Studio</title>
         <!-- fontawsome cdn link -->
         <link
@@ -10,36 +15,33 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
         <!-- css links -->
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/header.css" />
-        <link rel="stylesheet" href="css/hero.css" />
-        <link rel="stylesheet" href="css/process.css" />
-        <link rel="stylesheet" href="css/features.css" />
-        <link rel="stylesheet" href="css/offers.css" />
-        <link rel="stylesheet" href="css/develop.css" />
-        <link rel="stylesheet" href="css/signup.css" />
-        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/layout.css" />
     </head>
     <body>
         <!-- header section starts -->
-        <header id="header">
+        <header id="header" class="header">
             <div class="container">
                 <nav class="navbar">
                     <div class="navbar__logo">
                         <a href="#">
-                            <img src="images/pj-logo.png" alt="Pj Studio" />
+                            <img
+                                src="images/01- Header/pj-logo.png"
+                                alt="Pj Studio"
+                            />
                         </a>
                     </div>
+                    <button id="nav-open" class="btn nav__btn nav__btn--open">
+                        ☰
+                    </button>
+                    <div class="overlay"></div>
 
-                    <div class="navbar__toggle">
-                        <input type="checkbox" id="navbar__toggle--chk" />
-                        <label
-                            for="navbar__toggle--chk"
-                            class="fa-solid fa-bars"
-                        ></label>
-                    </div>
-
-                    <div class="navbar__menu">
+                    <div class="navbar__menu" id="menu">
+                        <button
+                            id="nav-close"
+                            class="btn nav__btn nav__btn--close"
+                        >
+                            ✕
+                        </button>
                         <ul class="navbar__menulists">
                             <li class="navbar__menulist">
                                 <a href="#Features" class="navbar__menulink"
@@ -62,12 +64,11 @@
                                 >
                             </li>
                         </ul>
-                    </div>
-
-                    <div class="navbar__btn">
-                        <button type="button" class="btn btn-primary">
-                            Request a demo
-                        </button>
+                        <div class="navbar__btn">
+                            <button type="button" class="btn btn-primary">
+                                Request a demo
+                            </button>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -81,17 +82,17 @@
                     <div class="hero__wrapper">
                         <div class="hero__left--item">
                             <h1>
-                                Web & Mobile <br />
-                                Design
+                                web & mobile <br />
+                                design
                                 <br />
-                                Development
+                                development
                             </h1>
                             <div class="hero__circles">
                                 <div class="hero__circles--green">
                                     <img
                                         class="design"
-                                        src="images/icon-telegram-8.jpg"
-                                        alt=""
+                                        src="images/01- Header/icon-telegram-8.jpg"
+                                        alt="pointer"
                                     />
                                     <div class="hero__circles--yellow"></div>
                                 </div>
@@ -113,7 +114,10 @@
                         </div>
 
                         <div class="hero__right--item">
-                            <img src="images/Header.png" alt="PJ Studio" />
+                            <img
+                                src="images/01- Header/hero-bg.svg"
+                                alt="PJ Studio"
+                            />
                         </div>
                     </div>
                 </div>
@@ -175,7 +179,10 @@
                 <div class="container">
                     <div class="features__wrapper">
                         <div class="features__item--left">
-                            <img src="images/bg-preview.png" alt="" />
+                            <img
+                                src="images/02- Features/bg-preview.png"
+                                alt="Mobile App Features"
+                            />
                         </div>
                         <div class="features__item--right">
                             <h5>Features</h5>
@@ -227,8 +234,8 @@
                         <div class="offers__item--down">
                             <div class="offers__item__img">
                                 <img
-                                    src="images/Tiny_content.png"
-                                    alt="Pj Studio"
+                                    src="images/03- Offers/offer-vector.png"
+                                    alt="Customize Offers"
                                 />
                                 <span></span>
                             </div>
@@ -303,7 +310,10 @@
                             </div>
                         </div>
                         <div class="features__item--left">
-                            <img src="images/web-develop.png" alt="" />
+                            <img
+                                src="images/02- Features/web-develop.png"
+                                alt="Web Development Features"
+                            />
                         </div>
                     </div>
                 </div>
@@ -322,7 +332,10 @@
                             </button>
                         </div>
                         <div class="signup__item--right">
-                            <img src="images/SignUp.png" alt="" />
+                            <img
+                                src="images/04- SignUp/SignUp.png"
+                                alt="SignUp"
+                            />
                         </div>
                     </div>
                 </div>
@@ -335,7 +348,10 @@
             <div class="container">
                 <div class="footer__wrapper">
                     <div class="footer__item">
-                        <img src="images/pj-logo.png" alt="" />
+                        <img
+                            src="images/01- Header/pj-logo.png"
+                            alt="Pj Studio"
+                        />
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing
                             elit. Minus, incidunt?
@@ -443,5 +459,6 @@
             </div>
         </footer>
         <!-- footer section ends -->
+        <script src="js/script.js"></script>
     </body>
 </html>

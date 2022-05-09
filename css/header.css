@@ -1,18 +1,13 @@
 #header {
-    top: 0;
     width: 100%;
-    position: fixed;
-    background: #f2f2f2;
-    z-index: 1000;
-    box-shadow: 0rem -1.5rem 3rem 2rem rgb(128 128 128 / 13%);
-    -webkit-box-shadow: 0rem -1.5rem 3rem 2rem rgb(128 128 128 / 13%);
 }
 .navbar {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
     padding: 2rem 1%;
+}
+.navbar__logo{
+    flex: 20%;
 }
 .navbar__logo img {
     height: 7rem;
@@ -29,65 +24,143 @@
     color: var(--purple);
     transition: all 0.4s ease-in-out;
 }
-.navbar__toggle {
-    display: none;
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 60%;
 }
-.navbar__toggle input {
+
+.nav__btn {
+    border: none;
+    background-color: transparent;
     font-size: 2rem;
     display: none;
 }
-.navbar__toggle label {
-    font-size: 3rem;
-    color: var(--purple);
+
+.overlay {
     cursor: pointer;
-    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
     opacity: 0;
+    visibility: hidden;
+    background: rgb(166 170 198 / 71%);
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 1200px) {
+
+@media screen and (max-width: 1022px){
+    .navbar__menulist {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 1rem;
+        border-bottom: 0.1rem solid #7854f747;
+    }
+    .navbar__menulists{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10rem;
+        width: 100%;
+        text-align: center;
+        gap: 2rem;
+    }
+    .nav{
+      -webkit-display: flex;
+      -moz-display: flex;
+      -ms-display: flex;
+      -o-display: flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -o-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center; 
+      -ms-flex-align: center;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header > .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0;
+    }
+    .navbar__menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      color: #0a172e;
+      background-color: #fff;
+      display: flex;
+      min-height: 100%;
+      width: min(100%, 30rem);
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      justify-content: space-between;
+      justify-items: center;
+      flex-direction: column;
+    }
+    .navbar__btn{
+        margin-bottom: 2rem;
+    }
+    .nav__right--open {
+      transform: translateX(0);
+      z-index: 100;
+    }
+   .header > .container .nav__btn {
+      display: grid;
+      width: min-content;
+    } 
+    .header > .container .nav__btn--close {
+      position: absolute;
+      right: 0;
+    }
+    .header > .nav__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    } 
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (max-width: 1200px) {
     html {
         font-size: 55%;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .navbar__toggle {
-        display: block;
-    }
-    .navbar__toggle label {
-        visibility: visible;
-        opacity: 1;
-    }
-    nav.navbar .navbar__menu {
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        padding: 1rem 2rem;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-        transform-origin: top;
-        transform: scaleY(0);
-        opacity: 0;
-    }
-    nav.navbar .navbar__menu .navbar__menulist {
-        display: block;
-        margin: 2rem 0;
-        font-size: 1.6rem;
-    }
-    input#navbar__toggle--chk:checked ~ .navbar__menu {
-        transform: scaleY(1) !important;
-        opacity: 1 !important;
-        z-index: 1000;
-    }
-    input#navbar__toggle--chk:checked ~ label::before {
-        content: '\f00d';
-    }
 }
 @media screen and (max-width: 450px) {
     html {
         font-size: 50%;
     }
-}
+} */

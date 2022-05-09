@@ -1,19 +1,14 @@
-#offers {
-    height: 35em;
-    margin: 15rem auto;
-    min-height: inherit;
-}
+
 .offers__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6rem;
     align-content: center;
-    height: 35em;
     min-height: inherit;
 }
 .offers__item--up h3 {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 700;
     line-height: 3.5rem;
     margin-top: 1.5rem;
@@ -35,25 +30,13 @@
     max-width: 530px;
     z-index: 1;
 }
-/* .offers__item__img span {
-    margin: 1.9rem 1.3rem;
-    padding: 0.2em;
-    position: relative;
-    top: -20rem;
-    right: 4rem;
-    width: 320px;
-    height: 180px;
-    border-radius: 150px 150px 0 0;
-    -webkit-transform: rotateX(180deg) rotateY(358deg) rotateZ(24deg);
-    background-color: green;
-} */
 .offers__item__box {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 .offer__item__box h4 {
-    font-size: 2.1rem;
+    font-size: clamp(1.8rem, 5vw, 2.1rem);
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -92,19 +75,30 @@
     -webkit-transform: translateX(15px);
     transform: translateX(15px);
 }
+@media (max-width: 1250px) {
+    .offers__item__img img {
+        max-width: 450px;
+    }
+}
+
 @media (max-width: 1024px) {
     #offers {
         padding: 3rem;
-        margin-bottom: 25rem;
     }
     .offers__item__img img {
         max-width: 400px;
     }
 }
-@media (max-width: 750px) {
-    #offers {
-        margin-bottom: 40rem;
+@media (max-width: 928px) {
+    .offers__item--down{
+        flex-direction: column;
+        gap: 0;
     }
+    .offers__wrapper {
+        gap: 2rem;
+    }
+}
+@media (max-width: 750px) {
     .offers__wrapper {
         gap: 0rem;
     }
@@ -112,6 +106,9 @@
         display: flex;
         flex-direction: column;
         gap: 3rem;
+    }
+    .offer__item__box {
+        width: 90vw;
     }
 }
 @media (max-width: 650px) {
@@ -125,4 +122,20 @@
     .offers__item__img img {
         max-width: 350px;
     }
+    .hero__left--item {
+        width: 70%;
+    }
+}
+@media (max-width: 450px) {
+    #offers {
+        padding: 3rem;
+        margin: 7rem auto;
+    }
+    .offers__item--down {
+        gap: 3rem;
+    }
+    .offers__item__img img {
+        max-width: 250px;
+    }
+
 }

@@ -1,5 +1,6 @@
-#signup {
-    margin-bottom: -10em;
+
+#signup{
+    padding-bottom: 0;
 }
 #signup .container {
     display: flex;
@@ -7,20 +8,20 @@
     padding: 0 9rem;
 }
 .signup__wrapper {
+    padding: 2rem;
+    margin: 0 auto;
     z-index: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 6rem;
-    -webkit-box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px -5px,
-        rgb(0 0 0 / 4%) 0px 10px 10px -5px;
-    box-shadow: rgb(0 0 0 / 10%) 0px 20px 15px 2px,
-        rgb(0 0 0 / 4%) 0px 10px 10px -5px;
+    -webkit-box-shadow: rgb(0 0 0 / 10%) 0px 20px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 20px 15px 2px, rgb(0 0 0 / 4%) 0px 10px 10px -5px;
     background-color: #f2f2f2;
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    max-width: 900px;
+    width: 60vw;
 }
 .signup__item--right img {
     max-width: 300px;
@@ -43,6 +44,19 @@
 }
 .signup__item--left .btn {
     text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+    .signup__item--right img {
+        max-width: 250px;
+    }
+    .signup__wrapper{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .signup__item--left{
+        text-align: center;
+        align-items: center;
+    }
 }
 @media (max-width: 850px) {
     #signup .container {

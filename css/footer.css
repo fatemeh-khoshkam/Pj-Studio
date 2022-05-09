@@ -1,23 +1,21 @@
 #footer {
+    padding-top: 16rem;
+    margin-top: -8rem;
     background: #fdf7ef;
-    padding-top: 22rem;
-    padding-bottom: 3rem;
-    clip-path: ellipse(96% 100% at 24.08% 100%);
+    clip-path: ellipse(86% 100% at 46.08% 94%);
 }
 .footer__wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8rem;
+    padding-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    justify-items: start;
+    gap: 3rem;
 }
 .footer__item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.7rem;
-    max-width: 20%;
 }
 .footer__item h4 {
     font-size: 1.8rem;
@@ -93,40 +91,23 @@
     #footer {
         clip-path: ellipse(96% 100% at 41% 100%);
     }
-    .footer__wrapper {
-        display: -ms-grid;
-        display: grid;
-        gap: 3rem;
-        -ms-grid-columns: repeat(3, minmax(250px, 0fr));
-        grid-template-columns: repeat(3, minmax(250px, 0fr));
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -ms-flex-line-pack: center;
-        align-content: center;
-    }
     .footer__item {
         max-width: 100%;
+    }
+    .footer__email {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__email input {
+        padding: 1.5rem 1rem;
     }
 }
 @media (max-width: 1000px) {
     #footer {
-        clip-path: ellipse(95% 100% at 46.08% 100%);
+        clip-path: ellipse(100% 100%);
     }
     #footer .container {
         padding: 0 2rem;
-    }
-    .footer__wrapper {
-        display: grid;
-        display: -ms-grid;
-        gap: 3rem;
-        -ms-grid-columns: repeat(2, minmax(250px, 0fr)) !important;
-        grid-template-columns: repeat(2, minmax(250px, 0fr)) !important;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -ms-flex-line-pack: center;
-        align-content: center;
     }
     .footer__item {
         max-width: 100%;
@@ -138,18 +119,6 @@
     }
     #footer .container {
         padding: 0 2rem;
-    }
-    .footer__wrapper {
-        display: grid;
-        display: -ms-grid;
-        gap: 3rem;
-        -ms-grid-columns: repeat(1, minmax(250px, 0fr)) !important;
-        grid-template-columns: repeat(1, minmax(250px, 0fr)) !important;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -ms-flex-line-pack: center;
-        align-content: center;
     }
     .footer__item {
         max-width: 100%;
