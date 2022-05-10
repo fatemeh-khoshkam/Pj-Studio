@@ -17,11 +17,20 @@
 }
 .hero__left--item h1 {
     font-size: clamp(3.5rem, 5vw, 7rem);
-    color: var(--dark-color);
     line-height: calc(1em + 0.5rem);
     text-transform: capitalize;
+    background: linear-gradient(51deg, #7854f7ba, #2200c8 50%, var(--dark-color) 50% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 250% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    text-shadow: -3px 1px 0px #00000038;
 }
-
+.hero__left--item h1:hover {
+    background-position: 0 100%;
+    text-shadow: -3px 1px 0px #6b6b6b3b;
+}
 .hero__left--item p {
     color: var(--secondary-color);
     font-size: 1.7rem;

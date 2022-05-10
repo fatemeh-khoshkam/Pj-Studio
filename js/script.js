@@ -18,3 +18,9 @@ function toggleMenu() {
     menu.classList.toggle('nav__right--open');
     menuOverlay.classList.toggle('active');
 }
+
+///// preloader
+let overlay = document.getElementById("preloader");
+window.addEventListener('load', function () {
+    overlay.style.display = 'none';
+})

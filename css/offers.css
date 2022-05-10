@@ -82,7 +82,7 @@
     background-size: 200% 100%;
     background-position: right bottom;
 }
-.offers__item__box .offer__item__box:hover {
+.offers__item__box .offer__item__box:hover{
     cursor: pointer;
     position: relative;
     -webkit-transform: translateX(15px);
