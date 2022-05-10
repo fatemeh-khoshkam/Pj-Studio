@@ -105,6 +105,18 @@ p{
     justify-content: center;
     box-shadow: 0.1rem 0.1rem 1rem 0 rgb(0 0 0 / 30%);
 }
+::-webkit-scrollbar {
+    width: 0.8rem;
+    height: 3rem;
+}
+::-webkit-scrollbar-track {
+    background: snow;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(-45deg,#744be645 50%, #d9bdf6);
+    border-radius: 0.3rem;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
